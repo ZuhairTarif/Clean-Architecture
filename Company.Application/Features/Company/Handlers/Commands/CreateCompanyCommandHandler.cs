@@ -3,6 +3,7 @@ using Company.Application.Features.Company.Requests.Commands;
 using Company.Application.Persistence.Contracts;
 using MediatR;
 using Company.Domain;
+using Company.Application.DTOs.CompanyDTO.Validators;
 
 namespace Company.Application.Features.Company.Handlers.Commands
 {
@@ -18,6 +19,15 @@ namespace Company.Application.Features.Company.Handlers.Commands
 
         public async Task<int> Handle(CreateCompanyCommandRequest request, CancellationToken cancellationToken)
         {
+
+            var validator = new CreateCompanyDTOValidator();
+            var validationResult = await validator.ValidateAsync(request.CreateCompanyDTO);
+
+            if (validationResult.IsValid ==  false)
+            {
+                throw new Exception();
+            }
+
             var company = _mapper.Map<CompanyModel>(request.CreateCompanyDTO);
             company = await _companyRepository.Add(company);
             return company.CompanyId;

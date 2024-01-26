@@ -1,6 +1,4 @@
 ﻿using Company.Application.DTOs.Common;
-using System;
-using System.Collections.Generic;
 
 namespace Company.Application.DTOs.CompanyDTO
 {
