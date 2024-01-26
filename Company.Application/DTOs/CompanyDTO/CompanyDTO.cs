@@ -1,5 +1,5 @@
 ﻿using Company.Application.DTOs.Common;
-namespace Company.Application.DTOs
+namespace Company.Application.DTOs.CompanyDTO
 {
     public abstract class CompanyDTO : BaseDTO
     {

@@ -6,7 +6,7 @@ using Company.Domain;
 
 namespace Company.Application.Features.Company.Handlers.Commands
 {
-    public class CreateCompanyListRequestHandler : IRequestHandler<CreateCompanyCommand, int>
+    public class CreateCompanyListRequestHandler : IRequestHandler<CreateCompanyCommandRequest, int>
     {
         private readonly ICompanyRepository _companyRepository;
         private readonly IMapper _mapper;
@@ -16,9 +16,9 @@ namespace Company.Application.Features.Company.Handlers.Commands
             this._mapper = mapper;
         }
 
-        public async Task<int> Handle(CreateCompanyCommand request, CancellationToken cancellationToken)
+        public async Task<int> Handle(CreateCompanyCommandRequest request, CancellationToken cancellationToken)
         {
-            var company = _mapper.Map<CompanyModel>(request.CompanyDTO);
+            var company = _mapper.Map<CompanyModel>(request.CreateCompanyDTO);
             company = await _companyRepository.Add(company);
             return company.CompanyId;
 

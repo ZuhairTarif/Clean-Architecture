@@ -1,5 +1,4 @@
-﻿using Company.Application.DTOs;
-using MediatR;
+﻿using MediatR;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,9 +7,8 @@ using System.Threading.Tasks;
 
 namespace Company.Application.Features.Company.Requests.Commands
 {
-    public class CreateCompanyCommand : IRequest<int>
+    public class DeleteCompanyCommandRequest : IRequest
     {
         public int CompanyId { get; set; }
-        public CompanyDTO CompanyDTO { get; set; }
     }
 }

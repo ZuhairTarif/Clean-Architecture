@@ -1,5 +1,5 @@
 ﻿using AutoMapper;
-using Company.Application.DTOs;
+using Company.Application.DTOs.CompanyDTO;
 using Company.Domain;
 using System;
 

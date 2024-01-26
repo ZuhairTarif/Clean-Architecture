@@ -1,5 +1,5 @@
 ﻿using AutoMapper;
-using Company.Application.DTOs;
+using Company.Application.DTOs.CompanyDTO;
 using Company.Application.Features.Company.Requests.Queries;
 using Company.Application.Persistence.Contracts;
 using MediatR;

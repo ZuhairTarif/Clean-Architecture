@@ -1,6 +1,5 @@
-﻿using Company.Application.DTOs;
+﻿using Company.Application.DTOs.CompanyDTO;
 using MediatR;
-
 
 namespace Company.Application.Features.Company.Requests.Queries
 {
