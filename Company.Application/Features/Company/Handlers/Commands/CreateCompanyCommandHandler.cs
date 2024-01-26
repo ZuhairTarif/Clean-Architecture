@@ -4,6 +4,7 @@ using Company.Application.Persistence.Contracts;
 using MediatR;
 using Company.Domain;
 using Company.Application.DTOs.CompanyDTO.Validators;
+using Company.Application.Exceptions;
 
 namespace Company.Application.Features.Company.Handlers.Commands
 {
@@ -25,7 +26,7 @@ namespace Company.Application.Features.Company.Handlers.Commands
 
             if (validationResult.IsValid ==  false)
             {
-                throw new Exception();
+                throw new ValidationException(validationResult);
             }
 
             var company = _mapper.Map<CompanyModel>(request.CreateCompanyDTO);

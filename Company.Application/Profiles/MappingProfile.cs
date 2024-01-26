@@ -12,7 +12,6 @@ namespace Company.Application.Profiles
         {
             CreateMap<CompanyModel, CompanyDTO>().ReverseMap();
 
-
         }
     }
 }
