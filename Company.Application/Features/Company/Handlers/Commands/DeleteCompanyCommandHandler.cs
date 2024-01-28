@@ -1,6 +1,6 @@
 ﻿using AutoMapper;
 using Company.Application.Features.Company.Requests.Commands;
-using Company.Application.Persistence.Contracts;
+using Company.Application.Contracts.Persistence;
 using MediatR;
 
 namespace Company.Application.Features.Company.Handlers.Commands

@@ -1,7 +1,7 @@
 ﻿using Company.Domain;
 
 
-namespace Company.Application.Persistence.Contracts
+namespace Company.Application.Contracts.Persistence
 {
     public interface ICompanyRepository : IGenericRepository<CompanyModel>
     {
