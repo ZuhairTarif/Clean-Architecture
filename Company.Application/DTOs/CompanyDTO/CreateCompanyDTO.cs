@@ -3,6 +3,7 @@ namespace Company.Application.DTOs.CompanyDTO
 {
     public class CreateCompanyDTO
     {
+        public string CompanyCode { get; set; }
         public string CompanyName { get; set; }
         public string CompanyNameBn { get; set; }
         public string AddressLine1 { get; set; }
@@ -11,6 +12,7 @@ namespace Company.Application.DTOs.CompanyDTO
         public string AddressLine2Bn { get; set; }
         public string Phone { get; set; }
         public bool IsActive { get; set; }
+        public DateTime ModifiedDate { get; set; }
 
     }
 }
