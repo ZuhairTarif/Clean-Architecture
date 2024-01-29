@@ -1,10 +1,12 @@
 ﻿using Company.Domain.Common;
+using System.ComponentModel.DataAnnotations;
 
 
 namespace Company.Domain
 {
     public class CompanyModel : BaseEntityDomain
     {
+        [Key]
         public int CompanyId { get; set; }
         public string CompanyCode { get; set; }
         public string CompanyName { get; set; }
