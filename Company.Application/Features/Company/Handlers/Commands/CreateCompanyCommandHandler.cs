@@ -1,12 +1,4 @@
-﻿using AutoMapper;
-using Company.Application.Features.Company.Requests.Commands;
-using Company.Application.Contracts.Persistence;
-using MediatR;
-using Company.Domain;
-using Company.Application.DTOs.CompanyDTO.Validators;
-using Company.Application.Responses;
-
-namespace Company.Application.Features.Company.Handlers.Commands
+﻿namespace Company.Application.Features.Company.Handlers.Commands
 {
     public class CreateCompanyListRequestHandler : IRequestHandler<CreateCompanyCommandRequest, BaseCommandResponse>
     {

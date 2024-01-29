@@ -1,6 +1,4 @@
-﻿using FluentValidation;
-
-namespace Company.Application.DTOs.CompanyDTO.Validators
+﻿namespace Company.Application.DTOs.CompanyDTO.Validators
 {
     public class CreateCompanyDTOValidator : AbstractValidator<CreateCompanyDTO>
     {

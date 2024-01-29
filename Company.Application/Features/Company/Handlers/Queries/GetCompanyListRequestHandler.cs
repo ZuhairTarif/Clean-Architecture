@@ -1,10 +1,4 @@
-﻿using AutoMapper;
-using Company.Application.DTOs.CompanyDTO;
-using Company.Application.Features.Company.Requests.Queries;
-using Company.Application.Contracts.Persistence;
-using MediatR;
-
-namespace Company.Application.Features.Company.Handlers.Queries
+﻿namespace Company.Application.Features.Company.Handlers.Queries
 {
     public class GetCompanyListRequestHandler : IRequestHandler<GetCompanyListRequest, List<CompanyDTO>>
     {

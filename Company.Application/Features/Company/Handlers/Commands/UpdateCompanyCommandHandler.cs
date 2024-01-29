@@ -1,9 +1,4 @@
-﻿using AutoMapper;
-using Company.Application.Features.Company.Requests.Commands;
-using Company.Application.Contracts.Persistence;
-using MediatR;
-
-namespace Company.Application.Features.Company.Handlers.Commands
+﻿namespace Company.Application.Features.Company.Handlers.Commands
 {
     public class UpdateCompanyCommandHandler : IRequestHandler<UpdateCompanyCommandRequest, Unit>
     {

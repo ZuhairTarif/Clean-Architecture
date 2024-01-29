@@ -1,8 +1,4 @@
-﻿using Company.Domain;
-using Company.Domain.Common;
-using Microsoft.EntityFrameworkCore;
-
-namespace Company.Persistence
+﻿namespace Company.Persistence
 {
     public class CompanyDbContext : DbContext
     {

@@ -1,8 +1,4 @@
-﻿using Microsoft.Extensions.DependencyInjection;
-using System.Reflection;
-using MediatR;
-
-namespace Company.Application
+﻿namespace Company.Application
 {
     public static class ApplicationServicesRegistration
     {

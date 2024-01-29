@@ -1,8 +1,4 @@
-﻿using AutoMapper;
-using Company.Application.DTOs.CompanyDTO;
-using Company.Domain;
-
-namespace Company.Application.Profiles
+﻿namespace Company.Application.Profiles
 {
     public class MappingProfile : Profile
     {

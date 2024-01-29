@@ -1,7 +1,4 @@
-﻿using Company.Application.Contracts.Persistence;
-using Company.Domain;
-
-namespace Company.Persistence.Repositories
+﻿namespace Company.Persistence.Repositories
 {
     public class CompanyRepository : GenericRepository<CompanyModel>, ICompanyRepository
     {

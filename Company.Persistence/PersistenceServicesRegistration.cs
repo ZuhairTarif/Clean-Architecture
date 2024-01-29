@@ -1,10 +1,4 @@
-﻿using Company.Application.Contracts.Persistence;
-using Company.Persistence.Repositories;
-using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.Configuration;
-using Microsoft.Extensions.DependencyInjection;
-
-namespace Company.Persistence
+﻿namespace Company.Persistence
 {
     public static class PersistenceServicesRegistration
     {

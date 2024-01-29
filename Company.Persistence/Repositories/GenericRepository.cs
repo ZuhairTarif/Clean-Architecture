@@ -1,7 +1,4 @@
-﻿using Company.Application.Contracts.Persistence;
-using Microsoft.EntityFrameworkCore;
-
-namespace Company.Persistence.Repositories
+﻿namespace Company.Persistence.Repositories
 {
     public class GenericRepository<T> : IGenericRepository<T> where T : class
     {
