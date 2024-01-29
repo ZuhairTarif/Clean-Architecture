@@ -8,19 +8,12 @@ namespace Company.API.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class CompanyController : ControllerBase
+    public class CompanyController(ISender mediator) : ControllerBase
     {
-        private readonly IMediator _mediator;
-
-        public CompanyController(IMediator mediator)
-        {
-            _mediator = mediator;
-        }
-
         [HttpGet]
         public async Task<ActionResult<List<CompanyDTO>>> Get()
         {
-            var company = await _mediator.Send(new GetCompanyListRequest());
+            var company = await mediator.Send(new GetCompanyListRequest());
             return Ok(company);
         }
 
@@ -32,7 +25,7 @@ namespace Company.API.Controllers
             {
                 CreateCompanyDTO = company
             };
-            var response = await _mediator.Send(command);
+            var response = await mediator.Send(command);
             return Ok(response);
         }
 
@@ -45,7 +38,7 @@ namespace Company.API.Controllers
                 UpdateCompanyDTO = company
             };
 
-            await _mediator.Send(command);
+            await mediator.Send(command);
             return NoContent();
         }
 
@@ -54,7 +47,7 @@ namespace Company.API.Controllers
         public async Task<ActionResult> Delete(int id)
         {
             var command = new DeleteCompanyCommandRequest { CompanyId = id };
-            await _mediator.Send(command);
+            await mediator.Send(command);
             return NoContent();
         }
     }

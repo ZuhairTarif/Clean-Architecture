@@ -1,8 +1,6 @@
 ﻿using AutoMapper;
 using Company.Application.DTOs.CompanyDTO;
 using Company.Domain;
-using System;
-
 
 namespace Company.Application.Profiles
 {
